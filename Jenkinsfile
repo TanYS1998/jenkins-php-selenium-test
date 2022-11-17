@@ -19,7 +19,6 @@ pipeline {
 						}
 					}
 					steps {
-						sh 'docker run -d -v /root/m2:/root/.m2 maven:latest'
 						sh 'mvn -B -DskipTests clean package'
 						sh 'mvn test'
 					}
